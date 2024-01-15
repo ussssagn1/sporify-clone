@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "pinia": "^2.1.7",
+    "uniqolor": "^1.1.1",
     "vue": "^3.3.11",
     "vue-material-design-icons": "^5.2.0",
     "vue-router": "^4.2.5"

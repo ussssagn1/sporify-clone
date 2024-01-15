@@ -53,8 +53,29 @@ let openMenu = ref(false)
         <Router-link to="/">
           <MenuItem class="ml-[1px]" :icon-size="23" name="Home" icon-string="home" page-url="/"/>
         </Router-link>
+        <Router-link to="/search">
+          <MenuItem class="ml-[1px]" :icon-size="24" name="Search" icon-string="search" page-url="/search"/>
+        </Router-link>
+        <Router-link to="/library">
+          <MenuItem class="ml-[2px]" :icon-size="23" name="Library" icon-string="library" page-url="/library"/>
+        </Router-link>
+        <div class="py-3.5"></div>
+        <MenuItem :icon-size="24" name="Create Playlist" icon-string="playlist" page-url="/playlist"/>
+        <MenuItem class="-ml-[1px]" :icon-size="27" name="Like Songs" icon-string="liked" page-url="/liked"/>
+      </ul>
+      <div class="border-b border-b-gray-700"></div>
+      <ul>
+        <li class="font-semibold text-[15px] mt-3 text-gray-300 hover:text-white">My Playlist #1</li>
+        <li class="font-semibold text-[15px] mt-3 text-gray-300 hover:text-white">My Playlist #2</li>
+        <li class="font-semibold text-[15px] mt-3 text-gray-300 hover:text-white">My Playlist #3</li>
+        <li class="font-semibold text-[15px] mt-3 text-gray-300 hover:text-white">My Playlist #4</li>
       </ul>
     </div>
+  </div>
+  <div class="fixed right-0 top-0 w-[calc(100%-240px)] overflow-auto h-full bg-gradient-to-b from-[#1C1C1C] to-black">
+    <div class="mt-[70px]"></div>
+    <RouterView />
+    <div class="mb-[100px]"></div>
   </div>
 </template>
 
