@@ -79,9 +79,9 @@ let openMenu = ref(false)
         <li class="font-semibold text-[15px] mt-3 text-gray-300 hover:text-white">My Playlist #3</li>
         <li class="font-semibold text-[15px] mt-3 text-gray-300 hover:text-white">My Playlist #4</li>
       </ul>
-    </div>
+    </div> <!-- НАВИГАЦИЯ -->
   </div>
-  <div class="fixed right-0 top-0 overflow-x-hidden w-[calc(100%-240px)] h-full bg-gradient-to-b from-[#1C1C1C] to-black">
+  <div class="fixed right-0 top-0 overflow-x-hidden w-[calc(100%-240px)] h-full bg-gradient-to-b from-[#1C1C1C] to-black"> <!-- ЭТО НАШЕ ГЛАВНОЕ ОКНО КОТОРОЕ МЕНЯЕТьсЯ с ПОМОЩЬЮ ROUTER-->
     <div class="mt-[70px]"></div>
     <RouterView />
     <div class="mb-[100px]"></div>

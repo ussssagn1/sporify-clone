@@ -1,15 +1,15 @@
 import { defineStore } from 'pinia'
-import artist from '../artist.json'
+import artist from '../artist.json' // ИМПОРТ МУЗЫКИ
 
 export const useSongStore = defineStore('song', {
   state: () => ({
     isPlaying: false,
-    audio: null,
+    audio: null,              // ГЛАВНОЕ ХРАНИЛИЩЕ
     currentArtist: null,
     currentTrack: null
   }),
   actions: {
-    loadSong(artist, track) {
+    loadSong(artist, track) { //ЗАГРУЗКА НОВОГО ТРЭКА ДЛЯ ВОСПРОИЗВЕДЕНИЯ
       this.currentArtist = artist
       this.currentTrack = track
 
@@ -28,7 +28,7 @@ export const useSongStore = defineStore('song', {
       }, 200)
     },
 
-    playOrPauseSong() {
+    playOrPauseSong() { // Воспроизводит или приостанавливает текущий трек
       if (this.audio.paused) {
         this.isPlaying = true
         this.audio.play()
@@ -38,7 +38,7 @@ export const useSongStore = defineStore('song', {
       }
     },
 
-    playOrPauseThisSong(artist, track) {
+    playOrPauseThisSong(artist, track) { // Воспроизводит или приостанавливает трек. Если трек не совпадает с текущим, загружает новый.
       if (!this.audio || !this.audio.src || (this.currentTrack.id !== track.id)) {
         this.loadSong(artist, track)
         return
